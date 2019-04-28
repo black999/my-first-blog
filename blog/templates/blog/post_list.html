@@ -1,9 +1,14 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title>Nowa strona</title>
+	<title>Posty</title>
 </head>
 <body>
-	<p>Witam w nowym swieci</p>	
+	<p>Posty</p>	
+	{% for post in posts %}
+		<p>published: {{ post.published_date }}</p>
+		<h2><a href="">{{ post.title }}</a></h2>
+		<p>{{ post.text|linebreaksbr }}</p>
+	{% endfor %}
 </body>
 </html>
